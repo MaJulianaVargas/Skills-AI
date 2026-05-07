@@ -1,7 +1,7 @@
 name: Sync Drive to GitHub
 
 on:
-schedule:
+  schedule:
     - cron: "0 */6 * * *"   # cada 6 horas
   workflow_dispatch:          # también manual desde la UI
   
