@@ -1,42 +1,19 @@
-
 name: Sync Drive to GitHub
-
-
 on:
-
-  schedule:
-
+schedule:
     - cron: "0 */6 * * *"   # cada 6 horas
-
   workflow_dispatch:          # también manual desde la UI
-
-
 permissions:
-
   contents: write
-
-
 jobs:
-
   sync:
-
     runs-on: ubuntu-latest
-
     steps:
-
       - uses: actions/checkout@v4
-
-
       - uses: sderosiaux/google-drive-to-github-sync@main
-
         with:
-
-          google_credentials: ${{ secrets.bd8628f7c2cc3a296bbe77f231e19ccbbff76fa7 }}
-
+          google_credentials: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           config: |
-
             sync:
-
               - drive_folder_id: "1PD8lK4mlKhMyyO7yn1vMjry2YJrn1JrM?hl=es"
-
                 github_folder: "docs/mi-carpeta"
