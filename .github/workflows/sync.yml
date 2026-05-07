@@ -31,7 +31,7 @@ jobs:
 
         with:
 
-          google_credentials: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          google_credentials: ${{ secrets.bd8628f7c2cc3a296bbe77f231e19ccbbff76fa7 }}
 
           config: |
 
